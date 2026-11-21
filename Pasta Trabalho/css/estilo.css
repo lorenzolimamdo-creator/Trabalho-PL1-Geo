@@ -6,7 +6,6 @@
     --fundo: #FFFFFF;
     --card: #EEF9F9;
     --texto: #132442;
-    --texto-secundario: #3551A4;
     --links: #3551A4;
     --borda: #8AD6D6;
     --destaque: #D6E264;
@@ -22,7 +21,6 @@
     --fundo: #132442;
     --card: #1B3159;
     --texto: #F4FAFA;
-    --texto-secundario: #8AD6D6;
     --links: #80A1F8;
     --borda: #3551A4;
     --destaque: #D6E264;
@@ -124,22 +122,6 @@ section {
     margin-bottom: 55px;
 }
 
-.apresentacao {
-    background-color: var(--destaque);
-    color: var(--branco);
-    padding: 65px 40px;
-    border-radius: 12px;
-}
-
-.apresentacao h1 {
-    color: var(--branco);
-    font-size: 40px;
-}
-
-.apresentacao p {
-    max-width: 650px;
-}
-
 .botao {
     display: inline-block;
     background-color: var(--borda);
@@ -169,7 +151,6 @@ section {
     font-weight: bold;
 }
 
-
 /* QR CODE */
 .qrcode {
     text-align: center;
@@ -190,15 +171,66 @@ footer {
 }
 
 footer a {
-    color: var(--acento);
+    color: var(--borda);
 }
 
 footer p {
     margin-bottom: 8px;
 }
 
+/* PAGINAÇÃO */
+.paginacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+.paginacao button {
+    padding: 8px 13px;
+    border: 1px solid var(--borda);
+    background-color: var(--branco);
+    color: var(--texto);
+    cursor: pointer;
+}
+
+.paginacao button:disabled {
+    background-color: var(--destaque);
+    color: var(--branco);
+    cursor: default;
+}
+
+/* FIGURAS E LEGENDAS */
+figure {
+    margin: 20px 0;
+}
+
+figcaption {
+    color: var(--texto);
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+/* BOTÃO DE TEMA */
+.botao-tema {
+    background-color: var(--destaque);
+    color: var(--texto);
+    border: 1px solid var(--borda);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font: inherit;
+}
+
+.botao-tema:hover {
+    background-color: var(--hover);
+    color: var(--fundo);
+}
+
 /* RESPONSIVIDADE */
-@media (max-width: 700px) {
+@media (max-width: 767.98px) {
 
     .menu {
         flex-wrap: wrap;
@@ -224,56 +256,6 @@ footer p {
         padding: 20px 15px;
     }
 
-    .apresentacao {
-        padding: 40px 25px;
-    }
-
-    .apresentacao h1 {
-        font-size: 30px;
-    }
-
-    .professor {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .professor img {
-        align-self: center;
-    }
-}
-
-/* TABLETS E CELULARES: até 767,98px */
-@media (max-width: 767.98px) {
-
-    .menu {
-        flex-wrap: wrap;
-    }
-
-    #botao-menu {
-        display: block;
-    }
-
-    #menu-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        gap: 12px;
-        padding-top: 20px;
-    }
-
-    #menu-links.aberto {
-        display: flex;
-    }
-
-    .professor {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .professor img {
-        align-self: center;
-    }
-
     .cartao {
         padding: 18px;
     }
@@ -294,19 +276,11 @@ footer p {
     }
 }
 
-/* CELULARES PEQUENOS: até 575,98px */
+/* CELULARES PEQUENOS */
 @media (max-width: 575.98px) {
 
     main {
         padding: 15px 10px;
-    }
-
-    .apresentacao {
-        padding: 30px 18px;
-    }
-
-    .apresentacao h1 {
-        font-size: 28px;
     }
 
     section {
@@ -317,51 +291,4 @@ footer p {
         max-width: 100%;
         height: auto;
     }
-}
-/* PAGINAÇÃO */
-.paginacao {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    margin: 25px 0;
-    flex-wrap: wrap;
-}
-
-.paginacao button {
-    padding: 8px 13px;
-    border: 1px solid var(--borda);
-    background-color: var(--branco);
-    color: var(--texto);
-    cursor: pointer;
-}
-
-.paginacao button:disabled {
-    background-color: var(--destaque);
-    color: var(--branco);
-    cursor: default;
-}
-figure {
-    margin: 20px 0;
-}
-
-figcaption {
-    color: var(--texto);
-    font-size: 14px;
-    margin-top: 8px;
-}
-
-.botao-tema {
-    background-color: var(--destaque);
-    color: var(--texto);
-    border: 1px solid var(--borda);
-    padding: 8px 14px;
-    border-radius: 6px;
-    cursor: pointer;
-    font: inherit;
-}
-
-.botao-tema:hover {
-    background-color: var(--hover);
-    color: var(--fundo);
 }
